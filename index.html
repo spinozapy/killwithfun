@@ -146,24 +146,29 @@
         }
 
 @keyframes glitch {
-  0% { text-shadow: 2px 0 red, -2px 0 cyan; }
-  10% { text-shadow: -2px 0 red, 2px 0 cyan; }
-  20% { text-shadow: 2px 0 red, -2px 0 cyan; }
-  30% { text-shadow: -2px 0 red, 2px 0 cyan; }
-  40% { text-shadow: 2px 0 red, -2px 0 cyan; }
-  50% { text-shadow: -2px 0 red, 2px 0 cyan; }
-  60% { text-shadow: 2px 0 red, -2px 0 cyan; }
-  70% { text-shadow: -2px 0 red, 2px 0 cyan; }
-  80% { text-shadow: 2px 0 red, -2px 0 cyan; }
-  90% { text-shadow: -2px 0 red, 2px 0 cyan; }
-  100% { text-shadow: 2px 0 red, -2px 0 cyan; }
+  0% { text-shadow: 2px 0 red, -2px 0 white; }
+  10% { text-shadow: -2px 0 red, 2px 0 white; }
+  20% { text-shadow: 2px 0 red, -2px 0 white; }
+  30% { text-shadow: -2px 0 red, 2px 0 white; }
+  40% { text-shadow: 2px 0 red, -2px 0 white; }
+  50% { text-shadow: -2px 0 red, 2px 0 white; }
+  60% { text-shadow: 2px 0 red, -2px 0 white; }
+  70% { text-shadow: -2px 0 red, 2px 0 white; }
+  80% { text-shadow: 2px 0 red, -2px 0 white; }
+  90% { text-shadow: -2px 0 red, 2px 0 white; }
+  100% { text-shadow: 2px 0 red, -2px 0 white; }
+}
+
+#typingEffect {
+  font-size: 2rem; 
+  font-weight: bold;
+  color: white; 
+  display: inline-block;
 }
 
 #typingEffect span {
-  font-size: 3rem; 
-  color: white;
-  display: inline-block;
-  animation: glitch 1.5s infinite;
+  font-size: inherit; 
+  animation: glitch 0.1s infinite;
 }
 
     </style>
