@@ -44,10 +44,6 @@
             text-decoration: none;
         }
 
-        td strong a {
-            text-decoration: none;
-        }
-
         body {
             user-select: none;
         }
@@ -60,7 +56,6 @@
             scrollbar-width: none;
             -ms-overflow-style: none;
         }
-        
 
         header {
             display: flex;
@@ -112,77 +107,69 @@
             scrollbar-width: none;
         }
 
-           
-    .python {
-        color: #4B8BBE;
-        text-shadow: 0px 0px 2px #4B8BBE;
-    }
+        .python {
+            color: #4B8BBE;
+            text-shadow: 0px 0px 2px #4B8BBE;
+        }
 
-    .csharp {
-        color: #178600;
-        text-shadow: 0px 0px 2px #178600;
-    }
+        .csharp {
+            color: #178600;
+            text-shadow: 0px 0px 2px #178600;
+        }
 
-    .cplusplus {
-        color: #F34B7D;
-        text-shadow: 0px 0px 2px #F34B7D;;
-    }
+        .cplusplus {
+            color: #F34B7D;
+            text-shadow: 0px 0px 2px #F34B7D;
+        }
 
-    .java {
-        color: #e86f00;
-        text-shadow: 0px 0px 2px #913721;
-    }
+        .java {
+            color: #e86f00;
+            text-shadow: 0px 0px 2px #913721;
+        }
 
-    .javascript {
-        color: #F7DF1E;
-        text-shadow: 0px 0px 2px #F7DF1E;
+        .javascript {
+            color: #F7DF1E;
+            text-shadow: 0px 0px 2px #F7DF1E;
+        }
 
-    }
-    
-    blockquote {
-        opacity: 0.9;
-        border-radius: 15px; 
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); 
-        backdrop-filter: blur(5px); 
-    }
+        blockquote {
+            opacity: 0.9;
+            border-radius: 15px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(5px);
+        }
 
-    .contact-section {
-        transition: opacity 0.5s ease-in-out, filter 0.5s ease;
-        filter: blur(0);
-        opacity: 1;
-    }
+        .contact-section {
+            transition: opacity 0.5s ease-in-out, filter 0.5s ease;
+            filter: blur(0);
+            opacity: 1;
+        }
 
-    .contact-section.hidden {
-        opacity: 0;
-        filter: blur(5px);
-        display: none;
-    }
+        .contact-section.hidden {
+            opacity: 0;
+            filter: blur(5px);
+            display: none;
+        }
 
-    .platform-cell {
-        padding-top: 0px;
-        padding-bottom: 0px;
-    }
+        .platform-cell {
+            padding-top: 0px;
+            padding-bottom: 0px;
+        }
 
-    @keyframes blink {
-    50% {
-        border-color: transparent;
-    }
-    }
+        .hellofriend {
+            font-family: 'Courier New', Courier, monospace;
+            border-right: 2px solid black;
+            white-space: nowrap;
+            overflow: hidden;
+        }
 
-    .hellofriend {
-        font-family: 'Courier New', Courier, monospace;
-        border-right: 2px solid black;
-        white-space: nowrap;
-        overflow: hidden;
-    }
-
-    .page-indicator {
-        font-weight: bold;
-        position: absolute;
-        right: 0px; 
-        top: 50%; 
-        transform: translateY(-50%); 
-    }
+        .page-indicator {
+            font-weight: bold;
+            position: absolute;
+            right: 0px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
 
     </style>
 </head>
@@ -196,111 +183,52 @@
     </header>
 
     <div>
-        <blockquote>    
+        <blockquote>
             <span id="spinozaText" class="typeing"></span>
         </blockquote>
     </div>
 
-<div id="contactSection1">
-    <blockquote>
-        <h4 style="padding-bottom: 10px; position: relative;">Contact Me<span class="page-indicator">(1/2)</span>:</h4>
-        <table>
-            <tr>
-                <td style="border: 1px solid #E2E2E2"><strong>Type</strong></td>
-                <td style="border: 1px solid #E2E2E2"><strong>Username</strong></td>
-                <td class="platform-cell" style="border: 1px solid #E2E2E2 "><strong>Platform</strong></td>
-            </tr>
-            <tr>
-                <td style="position: relative; top: 3px;">User Profile</td>
-                <td>
-                    <a href="https://discord.com/users/119788257859993601" rel="noreferrer" target="_blank" style="position: relative; top: 3px;">spinoza</a>
-                </td>
-                <td><img src="https://killwith.fun/img/discord.png" class="platform-logo" style="position: relative; top: 4px; margin-right: 1px;"> Discord</td>
-            </tr>
-            <tr>
-                <td style="position: relative; top: 3px;">Mail Address</td>
-                <td>
-                    <a href="mailto:contact@killwith.fun" style="position: relative; top: 3px;">contact</a>
-                </td>
-                <td><img src="https://killwith.fun/img/email.png" class="platform-logo" style="position: relative; top: 4px; margin-right: 1px;"> E-mail</td>
-            </tr>
-        </table>
-    </blockquote>
-</div>
+    <script>
+        const typingElement = document.getElementById("typingEffect");
+        const titleElement = document.querySelector("title");
+        const languages = ["fun"];
+        const languageColors = {
+            fun: "#950606"
+        };
+        let index = 0;
 
-<div id="contactSection2" style="display: none;">
-    <blockquote>
-        <h4 style="padding-bottom: 10px; position: relative;">Contact Me<span class="page-indicator">(2/2)</span>:</h4>
-        <table>
-            <tr>
-                <td style="border: 1px solid #E2E2E2"><strong>Type</strong></td>
-                <td style="border: 1px solid #E2E2E2"><strong>Username</strong></td>
-                <td class="platform-cell" style="border: 1px solid #E2E2E2"><strong>Platform</strong></td>
-            </tr>
-            <tr>
-                <td style="position: relative; top: 3px;">User Profile</td>
-                <td>
-                    <a href="https://instagram.com/spinozapy" rel="noreferrer" target="_blank" style="position: relative; top: 3px;">spinozapy</a>
-                </td>
-                <td><img src="https://killwith.fun/img/instagram.png" class="platform-logo" style="position: relative; top: 4px; margin-right: 1px;"> Instagram</td>
-            </tr>
-            <tr>
-                <td style="position: relative; top: 3px;">User Profile</td>
-                <td>
-                    <a href="https://github.com/spinozapy" rel="noreferrer" target="_blank" style="position: relative; top: 3px;">spinozapy</a>
-                </td>
-                <td><img src="https://killwith.fun/img/github.png" class="platform-logo" style="position: relative; top: 4px; margin-right: 1px;"> GitHub</td>
-            </tr>
-        </table>
-    </blockquote>
-</div>
+        function typeText() {
+            if (index < languages.length) {
+                const currentText = languages[index];
+                const newText = `${currentText}`;
 
-    <span style="color: gray; font-size: 17px; display: block; text-align: center; margin: 5; padding: 5;">
-        ~ Most things have both good and bad; find the balance and act wisely. ~
-    </span>
+                typingElement.innerHTML = `killwith.<span style="color: ${languageColors[currentText]}">${newText}</span>`;
+                titleElement.innerText = '{ Spinoza & Support }'; // Removed unnecessary '-'
 
+                index++;
+                setTimeout(() => {
+                    typeText();
+                }, 777);
+            } else {
+                index = 0;
+                setTimeout(() => {
+                    typeText();
+                }, 777);
+            }
+        }
 
-<script>
-const typingElement = document.getElementById("typingEffect");
-const titleElement = document.querySelector("title");
-const languages = ["fun"];
-const languageColors = {
-    fun: "#950606"
-};
-let index = 0;
-
-function typeText() {
-    if (index < languages.length) {
-        const currentText = languages[index];
-        const newText = `${currentText}`;
-
-        typingElement.innerHTML = `killwith.<span style="color: ${languageColors[currentText]}">${newText}</span>`;
-        titleElement.innerText = `{ Spinoza & Support }`; -
-
-        index++;
         setTimeout(() => {
             typeText();
         }, 777);
-    } else {
-        index = 0;
-        setTimeout(() => {
-            typeText();
-        }, 777);
-    }
-}
 
-setTimeout(() => {
-    typeText();
-}, 777);
-
-        document.addEventListener('keydown', function(e) {
+        document.addEventListener('keydown', function (e) {
             if (e.ctrlKey && (e.key === 'u' || e.key === 'U')) {
                 e.preventDefault();
                 window.location.href = 'https://killwith.fun/bluescreen';
             }
         });
-        
-        document.addEventListener('keydown', function(e) {
+
+        document.addEventListener('keydown', function (e) {
             if (e.key === 'F12') {
                 e.preventDefault();
                 window.location.href = 'https://killwith.fun/redscreen';
@@ -309,107 +237,72 @@ setTimeout(() => {
 
         let devToolsOpen = false;
         let devToolsTimer;
-        
+
         function checkDevTools() {
             devToolsOpen = window.outerWidth - window.innerWidth > 200 || window.outerHeight - window.innerHeight > 200;
             if (devToolsOpen) {
                 clearInterval(devToolsTimer);
-                window.location.href = 'https://killwith.fun/redscreen'; 
+                window.location.href = 'https://killwith.fun/redscreen';
             }
         }
-        
-        devToolsTimer = setInterval(checkDevTools, 0); 
+
+        devToolsTimer = setInterval(checkDevTools, 0);
 
     </script>
 
-<script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const element = document.getElementById('hellofriendEffect');
+            const text = ["/Spinoza", " & ", "/Support"];
+            const links = {
+                "/Spinoza": "https://killwith.fun/spinoza",
+                "/Support": "https://killwith.fun/support"
+            };
+            let index = 0;
 
-document.addEventListener('DOMContentLoaded', function() {
-    const element = document.getElementById('hellofriendEffect');
-    const text = ["/Spinoza", " & ", "/Support"];
-    const links = {
-        "/Spinoza": "https://killwith.fun/spinoza",
-        "/Support": "https://killwith.fun/support"
-    };
-    let index = 0;
+            function typeWriter() {
+                if (index < text.length) {
+                    const span = document.createElement("span");
 
-    function typeWriter() {
-        if (index < text.length) {
-            const span = document.createElement("span");
+                    if (links[text[index]]) {
+                        const link = document.createElement("a");
+                        link.href = links[text[index]];
+                        link.style.color = "#3366cc";
+                        link.style.fontWeight = "bold";
+                        link.style.textDecoration = "none";
+                        link.textContent = text[index];
+                        span.appendChild(link);
+                    } else {
+                        span.textContent = text[index];
+                    }
 
-            if (links[text[index]]) {
-                const link = document.createElement("a");
-                link.href = links[text[index]];
-                link.style.color = "#3366cc";
-                link.style.fontWeight = "bold";
-                link.style.textDecoration = "none";
-                link.textContent = text[index];
-                span.appendChild(link);
-            } else {
-                span.textContent = text[index];
+                    element.appendChild(span);
+                    index++;
+                    setTimeout(typeWriter, 300);
+                }
             }
 
-            element.appendChild(span);
-            index++;
-            setTimeout(typeWriter, 300);
-        }
-    }
+            setTimeout(typeWriter, 777);
+        });
+    </script>
 
-    setTimeout(typeWriter, 777);
-});
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const section1 = document.getElementById('contactSection1');
+            const section2 = document.getElementById('contactSection2');
 
-    function startSpinozaText() {
-        var data = [
-          {
-            spinozaText: `<span><h4 style="padding-bottom: 10px;">Who am I?</h4>
-              <i><span>I am a <op>malware</op> and <shadow>goodware</shadow> developer.<br/><br/>I have skills in languages:</span><br/><span class="python">Python</span>, <span class="csharp">C#</span>, <span class="cplusplus">C++</span>, <span class="java">Java</span> and <span class="javascript">JavaScript</span>. </i></span>`
-          }
-        ];
+            setInterval(toggleContactSections, 5000);
 
-        var allElements = document.getElementsByClassName("typeing");
-        for (var j = 0; j < allElements.length; j++) {
-          var currentElementId = allElements[j].id;
-          var currentElementIdContent = data[0][currentElementId];
-          var element = document.getElementById(currentElementId);
-          var devTypeText = currentElementIdContent;
-
-          var i = 0, isTag, text;
-          (function type() {
-            text = devTypeText.slice(0, ++i);
-            if (text === devTypeText) {
-                setTimeout(() => {
-                    document.getElementById("contactMeSection").style.display = "block";
-                }, 77); 
-                return;
+            function toggleContactSections() {
+                if (section1.style.display === 'none') {
+                    section1.style.display = 'block';
+                    section2.style.display = 'none';
+                } else {
+                    section1.style.display = 'none';
+                    section2.style.display = 'block';
+                }
             }
-            element.innerHTML = text + `<span class='blinker'>&#32;</span>`;
-            var char = text.slice(-1);
-            if (char === "<") isTag = true;
-            if (char === ">") isTag = false;
-            if (isTag) return type();
-            setTimeout(type, 60);
-          })();
-        }
-    }
-});
-
-    document.addEventListener('DOMContentLoaded', function() {
-    const section1 = document.getElementById('contactSection1');
-    const section2 = document.getElementById('contactSection2');
-
-    setInterval(toggleContactSections, 5000);
-
-    function toggleContactSections() {
-        if (section1.style.display === 'none') {
-            section1.style.display = 'block';
-            section2.style.display = 'none';
-        } else {
-            section1.style.display = 'none';
-            section2.style.display = 'block';
-        }
-    }
-});
-
+        });
     </script>
 </body>
 </html>
