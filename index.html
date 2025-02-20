@@ -263,10 +263,10 @@
 <script>
 const typingElement = document.getElementById("typingEffect");
 const titleElement = document.querySelector("title");
-const languages = ["spinoza", "support"];
+const languages = ["fun", "fun"];
 const languageColors = {
-    spinoza: "#F7DF1E",
-    support: "#F7DF1E"
+    fun: "#FFFFFF",
+    fun: "#950606"
 };
 let index = 0;
 
@@ -275,7 +275,7 @@ function typeText() {
         const currentText = languages[index];
         const newText = `${currentText}`;
 
-        typingElement.innerHTML = `killwith.fun/<span style="color: ${languageColors[currentText]}">${newText}</span>`;
+        typingElement.innerHTML = `killwith.<span style="color: ${languageColors[currentText]}">${newText}</span>`;
         titleElement.innerText = `{ Spinoza & Support }`; -
 
         index++;
