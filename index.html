@@ -145,6 +145,27 @@
             transform: translateY(-50%);
         }
 
+@keyframes glitch {
+  0% { text-shadow: 2px 0 red, -2px 0 cyan; }
+  10% { text-shadow: -2px 0 red, 2px 0 cyan; }
+  20% { text-shadow: 2px 0 red, -2px 0 cyan; }
+  30% { text-shadow: -2px 0 red, 2px 0 cyan; }
+  40% { text-shadow: 2px 0 red, -2px 0 cyan; }
+  50% { text-shadow: -2px 0 red, 2px 0 cyan; }
+  60% { text-shadow: 2px 0 red, -2px 0 cyan; }
+  70% { text-shadow: -2px 0 red, 2px 0 cyan; }
+  80% { text-shadow: 2px 0 red, -2px 0 cyan; }
+  90% { text-shadow: -2px 0 red, 2px 0 cyan; }
+  100% { text-shadow: 2px 0 red, -2px 0 cyan; }
+}
+
+#typingEffect span {
+  font-size: 3rem; 
+  color: white;
+  display: inline-block;
+  animation: glitch 1.5s infinite;
+}
+
     </style>
 </head>
 
@@ -165,14 +186,11 @@
     <script>
     document.addEventListener('DOMContentLoaded', function () {
     const typingElement = document.getElementById("typingEffect");
-    const titleElement = document.querySelector("title");
-    
+
     const textBefore = "killwith.";
     const textAfter = "fun";
-    const color = "#950606"; 
-
-    typingElement.innerHTML = `${textBefore}<span style="color: ${color}">${textAfter}</span>`; 
-    titleElement.innerText = '{ Spinoza & Support }'; 
+        
+    typingElement.innerHTML = `${textBefore}<span>${textAfter}</span>`;
 });
 
 
