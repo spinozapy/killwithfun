@@ -326,22 +326,36 @@ setTimeout(() => {
 
 document.addEventListener('DOMContentLoaded', function() {
     const element = document.getElementById('hellofriendEffect');
-    const text = '<a href="https://killwith.fun/spinoza" style="color: #3366cc; font-weight: bold;">/Spinoza</a> & <a href="https://killwith.fun/support" style="color: #3366cc; font-weight: bold;">/Support</a>';
+    const text = "/Spinoza & /Support";
+    const links = {
+        "/Spinoza": "https://killwith.fun/spinoza",
+        "/Support": "https://killwith.fun/support"
+    };
     let index = 0;
-    
-    function typeWriter(text, callback) {
+
+    function typeWriter(callback) {
         if (index < text.length) {
-            element.innerHTML += text.charAt(index);
+            let char = text.charAt(index);
+            element.innerHTML += char;
             index++;
-            setTimeout(() => typeWriter(text, callback), 77);
+            setTimeout(() => typeWriter(callback), 77);
         } else if (callback) {
             setTimeout(callback, 200);
+        } else {
+            applyLinks();
         }
     }
 
+    function applyLinks() {
+        element.innerHTML = element.innerHTML
+            .replace("/Spinoza", `<a href="${links["/Spinoza"]}" style="color: #3366cc; font-weight: bold; text-decoration: none;">/Spinoza</a>`)
+            .replace("/Support", `<a href="${links["/Support"]}" style="color: #3366cc; font-weight: bold; text-decoration: none;">/Support</a>`);
+    }
+
     setTimeout(() => {
-        typeWriter(text, startSpinozaText);
-    }, 777); 
+        typeWriter();
+    }, 777);
+});
 
     function startSpinozaText() {
         var data = [
