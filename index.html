@@ -169,11 +169,12 @@ document.addEventListener('DOMContentLoaded', function () {
     
     const textBefore = "killwith.";
     const textAfter = "fun";
-    const color = "#950606";  
+    const color = "#950606"; 
 
     typingElement.innerHTML = `${textBefore}<span style="color: ${color}; font-weight: bold;">${textAfter}</span>`; 
     titleElement.innerText = '{ Spinoza & Support }'; 
 });
+
         
         document.addEventListener('keydown', function (e) {
             if (e.ctrlKey && (e.key === 'u' || e.key === 'U')) {
