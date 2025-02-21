@@ -25,29 +25,30 @@
         }
 
         body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    background-color: black;
-}
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            background-color: black;
+       }
 
-body::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('https://killwith.fun/img/background.gif');
-    background-size: 100% 100%; 
-    background-repeat: no-repeat;
-    background-position: center;
-    z-index: -1; 
-}
+       body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.9)),
+            url(https://killwith.fun/img/background.gif);
+            background-size: 100% 100%; 
+            background-repeat: no-repeat;
+            background-position: center;
+            z-index: -1; 
+        }
 
         pre {
             color: white;
