@@ -221,7 +221,7 @@ document.addEventListener('keydown', function(e) {
         const user = json.data.discord_user;
 
         if (user && user.avatar) {
-            const avatarURL = `https://cdn.discordapp.com/avatars/${DISCORD_USER_ID}/${user.avatar}.png?size=512`;
+            const avatarURL = `https://cdn.discordapp.com/avatars/${DISCORD_USER_ID}/${avatar}.png?size=512`;
             imgElement.src = avatarURL;
         } else {
             imgElement.src = DEFAULT_AVATAR;
