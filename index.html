@@ -220,7 +220,7 @@ document.addEventListener('keydown', function(e) {
         const avatarHash = result?.data?.discord_user?.avatar;
 
         if (avatarHash) {
-            const avatarURL = `https://cdn.discordapp.com/avatars/${DISCORD_USER_ID}/${avatarHash}.gif?size=512`;
+            const avatarURL = `https://cdn.discordapp.com/avatars/${DISCORD_USER_ID}/${avatarHash}.webp?size=512`;
             img.src = avatarURL;
         } else {
             img.src = DEFAULT_AVATAR;
