@@ -188,9 +188,12 @@
 </head>
 
 <body>
-    <img draggable="false" src="https://killwith.fun/img/arleken.png" class="pfp" alt="Arleken" />
     <header style="padding-bottom: 10px !important">
-        <h1>{ <span id="typingEffect"></span> }</h1>
+        <h1>
+            <span style="color: white;">{ </span>
+            <span style="color: #8B0000; text-shadow: 2px 2px 4px #8B0000;">Arleken</span>
+            <span style="color: white;"> }</span>
+        </h1>
         <nav>
             <p id="hellofriendEffect"></p>
         </nav>
@@ -261,42 +264,6 @@
     </span>
 
 <script>
-    
-const typingElement = document.getElementById("typingEffect");
-const titleElement = document.querySelector("title");
-const languages = ["py", "cs", "cpp", "java", "js"];
-const languageColors = {
-    py: "#4B8BBE",
-    cs: "#178600",
-    cpp: "#F34B7D",
-    java: "#e86f00",
-    js: "#F7DF1E"
-};
-let index = 0;
-
-function typeText() {
-    if (index < languages.length) {
-        const currentText = languages[index];
-        const newText = `${currentText}`;
-
-        typingElement.innerHTML = `Arleken`;
-        titleElement.innerText = `{ Arleken }`; -
-
-        index++;
-        setTimeout(() => {
-            typeText();
-        }, 555);
-    } else {
-        index = 0;
-        setTimeout(() => {
-            typeText();
-        }, 555);
-    }
-}
-
-setTimeout(() => {
-    typeText();
-}, 555);
 
         document.addEventListener('keydown', function(e) {
             if (e.ctrlKey && (e.key === 'u' || e.key === 'U')) {
