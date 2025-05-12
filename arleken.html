@@ -19,24 +19,44 @@
       font-style: normal;
     }
 
+    * {
+        user-select: none !important;
+        -webkit-user-drag: none !important;
+        pointer-events: none;
+    }
+
+    a, a * {
+         pointer-events: auto;
+    }
+
+    body, html {
+        overflow: hidden !important;
+        scrollbar-width: none !important;
+        -ms-overflow-style: none !important;
+    }
+
+    ::-webkit-scrollbar {
+        display: none !important;
+    }
+
     html, body {
-      overflow: hidden;
-      height: 100vh;
-      width: 100vw;
-      font-family: "Cambridge Gothic", serif;
-      color: white;
+        overflow: hidden;
+        height: 100vh;
+        width: 100vw;
+        font-family: "Cambridge Gothic", serif;
+        color: white;
     }
 
     body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    background-color: black;
-}
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        background-color: black;
+    }
 
     body::before {
         content: '';
@@ -165,10 +185,10 @@
 </head>
 <body>
   <div class="container">
-    <a href="https://killwith.fun/arleken" target="_blank">
+    <a href="https://killwith.fun/arleken">
       <img src="https://killwith.fun/img/arleken.png" alt="PFP" class="profile-image" target="_blank" />
     </a>
-    <div class="center-text">Arleken</div>
+    <div class="center-text">~ Arleken ~</div>
     <div class="sub-text">~ Most things have both good and bad; find the balance and act wisely. ~</div>
   </div>
 
@@ -227,6 +247,26 @@
                 }
             });
         });
+</script>
+
+<script>
+  document.addEventListener('contextmenu', e => {
+    if (!e.target.closest('a')) e.preventDefault();
+  });
+
+  document.addEventListener('selectstart', e => {
+    if (!e.target.closest('a')) e.preventDefault();
+  });
+
+  document.addEventListener('dragstart', e => {
+    if (!e.target.closest('a')) e.preventDefault();
+  });
+
+  document.addEventListener('keydown', function(e) {
+    if ((e.ctrlKey && ['a','c','s','x','v','p'].includes(e.key.toLowerCase())) || e.key === 'PrintScreen') {
+      e.preventDefault();
+    }
+  });
 </script>
 
 </body>
